@@ -1,0 +1,45 @@
+.input {
+  &_text {
+    height: 48px;
+    padding: 12px 10px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid $color-light;
+    font-size: 180%;
+    background: rgba($color: $color-light, $alpha: 0.85);
+
+    &::placeholder {
+      color: #272733;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &_file {
+    display: flex;
+    justify-content: center;
+    border: 2px solid $color-secondary;
+    border-radius: 3px;
+    background: rgba($color: $color-light, $alpha: 0.85);
+
+    input {
+      display: none;
+    }
+
+    label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 10px;
+      width: 100%;
+      padding: 10px 0;
+      font-weight: 600;
+      font-size: 150%;
+      line-height: 1.2;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+}

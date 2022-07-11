@@ -1,0 +1,86 @@
+.order__steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 85px;
+  background: url('/assets/icons/dots-line.svg');
+  background-repeat: no-repeat;
+  background-position: center 30%;
+
+  @media (max-width: 1024px) {
+    background-position: center 25%;
+    background-size: 72% auto;
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 60px;
+    column-gap: 5px;
+    background-position: center 25%;
+    background-size: 70% auto;
+  }
+
+  @media (max-width: 680px) {
+    column-gap: 5%;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: none;
+  }
+}
+
+.order__st {
+  &-item {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+
+    @media (max-width: 680px) {
+      width: 30%;
+    }
+
+    @media (max-width: 320px) {
+      width: 45%;
+    }
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 5px solid #286690;
+    background: $color-secondary;
+
+    @media (max-width: 1024px) {
+      width: 80px;
+      height: 80px;
+    }
+
+    @media (max-width: 768px) {
+      width: 65px;
+      height: 65px;
+    }
+
+    img {
+      @media (max-width: 768px) {
+        width: 40%;
+      }
+    }
+  }
+
+  &-text {
+    padding: 0 10px;
+    font-size: 160%;
+    line-height: 1.18;
+    color: $color-light;
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 130%;
+    }
+  }
+}

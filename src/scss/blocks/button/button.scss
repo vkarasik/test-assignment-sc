@@ -1,0 +1,48 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+
+  &_size_sm {
+    min-width: 183px;
+    padding: 15px 0;
+    border-radius: 4px;
+    font-size: 130%;
+    line-height: 1.2;
+  }
+
+  &_size_md {
+    min-width: 183px;
+    padding: 15px 0;
+    border-radius: 4px;
+    font-size: 150%;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &_color_blue {
+    color: $color-light;
+    background: $color-secondary;
+    border: 1px solid $color-light;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background: darken($color-secondary, 10%);
+    }
+  }
+
+  &_color_white {
+    color: #2a2b30;
+    background: $color-light;
+    border: 1px solid #6f6d7b;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background: darken($color-light, 10%);
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.nav__burger {
+  display: none;
+  flex-direction: column;
+  align-content: space-between;
+  row-gap: 6px;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+
+  .burger__line {
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: $color-light;
+    transition: transform 0.5s ease;
+  }
+
+  &_open {
+    .burger__line_1 {
+      transform: rotate(45deg) translate(0, 6px);
+    }
+    .burger__line_2 {
+      display: none;
+    }
+    .burger__line_3 {
+      transform: rotate(-45deg) translate(0, -6px);
+    }
+  }
+}
+
+@keyframes fade-links {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

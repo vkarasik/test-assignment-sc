@@ -1,0 +1,11 @@
+@import './order__steps';
+@import './order__title';
+
+.order {
+  padding: 120px 0 150px;
+  background: url('/assets/bg_order.png') no-repeat top center, #272733;
+
+  @media (max-width: 768px) {
+    padding: 90px 0 100px;
+  }
+}

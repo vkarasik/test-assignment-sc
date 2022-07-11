@@ -1,0 +1,29 @@
+.footer__contacts {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 38px;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    column-gap: 10px;
+  }
+
+  @media (max-width: 768px) {
+  }
+}
+
+.footer__contact {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 10px;
+  font-size: 130%;
+  line-height: 1.2;
+  color: $color-light;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: darken($color-light, 20%);
+  }
+}

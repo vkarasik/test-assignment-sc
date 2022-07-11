@@ -1,0 +1,19 @@
+.order__title {
+  text-align: center;
+  margin-bottom: 80px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 50px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 180%;
+    line-height: 1.2;
+    color: #bbbbbb;
+  }
+
+  .headline {
+    margin: 0 0 30px;
+  }
+}

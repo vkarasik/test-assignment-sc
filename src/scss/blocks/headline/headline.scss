@@ -1,0 +1,38 @@
+.headline {
+  margin: 0;
+  padding: 0;
+
+  &_color_dark {
+    color: #000000;
+  }
+
+  &_color_light {
+    color: #ffffff;
+  }
+
+  &_color_hl {
+    color: $color-secondary;
+  }
+
+  &_size_md {
+    font-size: 360%;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      font-size: 320%;
+    }
+  }
+
+  &_size_lg {
+    font-size: 480%;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+    @media (max-width: 768px) {
+      font-size: 350%;
+    }
+  }
+}

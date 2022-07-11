@@ -1,0 +1,117 @@
+.selectbox {
+  $tr-prop: 0.3s ease;
+
+  position: relative;
+  z-index: 10;
+  height: 48px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid $color-light;
+  font-size: 180%;
+  background: rgba($color: $color-light, $alpha: 0.85);
+  transition: background-color $tr-prop, border $tr-prop;
+
+  &_open {
+    border: 1px solid $color-gray;
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: $color-gray;
+
+    .selectbox__default {
+      color: $color-light;
+    }
+
+    .selectbox__dropdown {
+      transform: translateY(-50%) rotate(180deg);
+      filter: invert(1);
+    }
+
+    .selectbox__options {
+      height: 144px;
+    }
+  }
+
+  &__default {
+    width: 100%;
+    box-sizing: border-box;
+    height: 48px;
+    padding: 12px 10px;
+    transition: all $tr-prop;
+    cursor: pointer;
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: url('/assets/icons/dropdown.svg') no-repeat center center;
+    transition: transform $tr-prop;
+
+    &_open {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &__options {
+    position: absolute;
+    top: 47px;
+    left: -1px;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    border: 1px solid $color-gray;
+    border-top: none;
+    border-radius: 3px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow-y: scroll;
+    transition: all $tr-prop;
+
+    &_open {
+      height: 144px;
+    }
+
+    // Webkit scrollbar
+    &::-webkit-scrollbar {
+      width: 7px;
+      border-radius: 3px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      background: $color-secondary;
+    }
+    &::-webkit-scrollbar-track {
+      margin: 2px 2px;
+      border-radius: 3px;
+      background: $color-gray;
+    }
+
+    // Firefox scrollbar
+    scrollbar-color: $color-secondary $color-gray;
+    scrollbar-width: thin;
+
+    input {
+      display: none;
+    }
+
+    label {
+      display: flex;
+      align-content: center;
+      box-sizing: border-box;
+      height: 48px;
+      padding: 12px 10px;
+      color: $color-light;
+      background: rgba(39, 39, 51, 1);
+      cursor: pointer;
+      transition: color $tr-prop;
+
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+  }
+}

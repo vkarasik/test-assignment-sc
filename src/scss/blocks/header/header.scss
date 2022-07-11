@@ -1,0 +1,24 @@
+@import '../logo/logo.scss';
+@import '../nav/nav.scss';
+
+.header {
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background: rgba($color-primary, 0.9);
+  overflow-x: hidden;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 768px) {
+    height: 12vh;
+  }
+}
